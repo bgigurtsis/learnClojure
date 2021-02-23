@@ -2,6 +2,11 @@
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "teapot bitch!"))
+  [severity]
+  (str "Disaster We're "
+    (if (= severity :mild)
+      "Mildly inconvenienced"
+      "Doomed")))
+
+
+(-main :mild)
