@@ -1,15 +1,5 @@
 (ns clojure-noob.core
   (:gen-class))
 
-;define function main
-(defn -main
-  ;define argument 'severity'
-  [severity]
-  (str "Disaster We're "
-    (if (= severity :mild)
-      "Mildly inconvenienced")
-    (if (= severity :severe)
-      "Doomed"
-      "ok?")))
-
-(-main :mild)
+(defn main [severity]
+  (println "We're" (severity {:mild "mildly inconvenienced." :severe "doomed."} "OK.")))
